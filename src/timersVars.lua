@@ -1,5 +1,5 @@
 -- init vars
-GameStartTimerWindow = CreateTimerDialog();
+GameStartTimerDialogue = nil;
 GameStartTimer = CreateTimer();
 
 PREPERATION_TIME_SECONDS = 65
