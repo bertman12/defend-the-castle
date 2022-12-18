@@ -1,0 +1,2 @@
+-- init var
+Players = CreateForce()
