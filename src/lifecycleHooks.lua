@@ -16,10 +16,13 @@ do
     end)
     OnInit.map(function()
         print "All Map Initialization events have run"
+        Main()
     end)
     OnInit.final(function()
         print "The game has now started"
-        Main()
+        IngameConsole.createTriggers()
+        Economy.setup()
+        Economy.welfare()
     end)
 end
 

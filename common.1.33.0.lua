@@ -2889,6 +2889,7 @@ function ForceEnumAllies(whichForce, whichPlayer, filter) end	-- (native)
 ---@param filter? boolexpr
 function ForceEnumEnemies(whichForce, whichPlayer, filter) end	-- (native)
 
+-- Calls for each object in force?
 ---@param whichForce force
 ---@param callback function
 function ForForce(whichForce, callback) end	-- (native)

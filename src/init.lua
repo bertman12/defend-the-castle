@@ -14,8 +14,11 @@ do
     
     local function initializePlayer()
         if ( playerIsUser() ) then
+            -- Add player to force
             ForceAddPlayerSimple( GetEnumPlayer(), Players )
+            -- Create starting units
             CreateUnit(GetEnumPlayer(),FourCC('h001'), 300, -300, 0)
+            -- Set starting resources
             SetPlayerStateBJ( GetEnumPlayer(), PLAYER_STATE_RESOURCE_GOLD, 125 )
             SetPlayerStateBJ( GetEnumPlayer(), PLAYER_STATE_RESOURCE_FOOD_CAP, 8 )
             SetPlayerStateBJ( GetEnumPlayer(), PLAYER_STATE_RESOURCE_LUMBER, 55 )
@@ -37,8 +40,8 @@ do
     
     local function initGate()
         local startupTrig = CreateTrigger(  )
-        TriggerRegisterTimerEventSingle( startupTrig, 1.00 )
         TriggerAddAction( startupTrig, gameInit )
+        TriggerExecuteBJ(startupTrig, false)
     end
 
     function Main()
